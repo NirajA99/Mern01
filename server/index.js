@@ -8,6 +8,7 @@ server.use(cors());
 server.use(express.json());
 
 server.use('/users', require('./routes/userRoutes'))
+server.use('/blogs', require('./routes/blogRoutes'))
 
 
 server.listen(4000 ,()=>{

@@ -9,6 +9,7 @@ import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import AuthProvider from './contexts/AuthContexts';
 import Navbar from './components/Navbar';
+import BlogProvider from './contexts/BlogContext';
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
     <>
       <BrowserRouter>
         <AuthProvider>
+          <BlogProvider>
+
           <Navbar />
           <Routes>
             <Route
@@ -41,12 +44,13 @@ function App() {
             <Route
               path='/profile'
               element={<Profile />}
-            />
+              />
             <Route
               path='/about'
               element={<About />}
-            />
+              />
           </Routes>
+              </BlogProvider>
         </AuthProvider>
       </BrowserRouter>
     </>
